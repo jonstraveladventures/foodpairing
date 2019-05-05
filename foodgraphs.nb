@@ -1,297 +1,157 @@
-(*Text taken from http://nouveauraw.com/raw-recipe-templates-and-development/flavor-prfiles-that-pair-well-in-recipes/*)
+ss1=StringSplit["\[Bullet] Allspice pairs well with:apples,beets,cabbage,caramel,cardamom,cinnamon,cloves,coriander,ginger,juniper,mace,mustard,nuts,nutmeg,onions,pears,pumpkin,root vegetables,yams.\[Bullet] Almond pairs well with:apple,apricot,banana,caramel,cherry,coffee,fig,honey,orange,peach,pear,plum
+\[Bullet] Anice pairs well with:apples,beets,caramel,carrots,chocolate,citrus,cinnamon,coconut,coriander,cranberry,fennel,figs,fish,garlic,peaches,pomegranates,pumpkin
+\[Bullet] Apple pairs well with:caramel,cardamom,chestnut,cinnamon,cranberry,currant,ginger,hazelnut,mango,maple,rosemary,walnut
+\[Bullet] Apricot pairs well with:almond,black pepper,caramel,cardamom,ginger,hazelnut,honey,orange,peach,vanilla,plum
+\[Bullet] Asian Pear pairs well with:almond,apple,black pepper,cinnamon,ginger,honey,macadamia,nutmeg,raisin,vanilla
+\[Bullet] Banana pairs well with:caramel,cherry,chocolate,cinnamon,coffee,ginger,hazelnut,honey,mango,molasses,papaya
+\[Bullet] Basil pairs well with:capers,chives,cilantro,garlic,marjoram,oregano,mint,onion,parsley,rosemary,thyme,artichokes,eggplant,green vegetables,mushrooms,olives,Sweet Basil is the best basil for pesto and tomato salads.\[Bullet] Bay leaf pairs well with:artichokes,beans,garlic,grains,juniper,lentils,marjoram,mushrooms,nuts,oregano,parsley,potatoes,sage,savory,thyme and tomatoes
+\[Bullet] Blackberry pairs well with:apricot,black pepper,cinnamon,citrus,hazelnut,lemon,other berries,peach,plum
+\[Bullet] Blood Orange pairs well with:almond,cardamom,chocolate,cinnamon,clove,fig,ginger,honey,other citrus
+\[Bullet] Blueberry pairs well with:other berries,cardamom,mango,lemon,hazelnut,ginger,fig,lavender,other citrus
+\[Bullet] Caraway pairs well with:apples,beets,broccoli,cabbage,pears,sauerkraut,allspice,almonds,cardamom,chili,cinnamon,coriander,dill,fennel seed,juniper berry,onion,mushrooms,garlic,oregano,parsley,thyme.\[Bullet] Cardamom pairs well with:apples,bananas,beans,caramel,citrus fruit,coconut,ice creams,nuts,mango,allspice,almond,cardamom,chili,cinnamon,clove,coriander,cumin,curry,dates,fennel seed,ginger,mustard,paprika,pears,pepper,star anise,turmeric,saffron
+\[Bullet] Carrot pairs well with:anise,cinnamon,ginger,nutmeg,walnut
+\[Bullet] Celery pairs well with:cabbage,cilantro,cucumber,cumin,garlic,ginger,mustard,onion,parsley,pepper,rosemary,sage,tomatoes,thyme
+\[Bullet] Celery Seed pairs well with:tomatoes,allspice,black pepper,caraway,chili,cinnamon coriander,cumin,fennel seed,ginger,sage,turmeric
+\[Bullet] Cherry pairs well with:apricot,black pepper,chocolate,citrus,nectarine,peach,plum,vanilla
+\[Bullet] Chestnut pairs well with:apple,caramel,chocolate,coffee,pear,vanilla
+\[Bullet] Chives pair well with:asparagus,basil,cheese,cilantro,dill,fennel,green vegetables,horseradish,mushrooms,olives,paprika,pasta,parsley,tarragon
+\[Bullet] Chocolate pairs well with:oranges,nuts,Allspice,almond,aniseed,cinnamon,clove,curry leaf,fennel seed,garlic,ginger,lemongrass,mint,nutmeg,onion,vanilla
+\[Bullet] Cilantro (coriander) pairs well with:apples,apricot,avocados,berries,cherries,citrus,coconut,nectarine,peach,plum,tropical fruit,Allspice,Cardamom,clove,cumin,curry,dates,fennel seed,garlic,ginger,mint,sun-dried tomato,turmeric,tomatoes.\[Bullet] Cinnamon pairs well with:allspice,apples,bananas,cantaloupe,caraway,cardamom,clove,cacao,chilies,caramel,cauliflower,chocolate,corn,curries,coffee,coriander,cranberry,cumin,dates,figs,ginger,mint,nutmeg,grapes,oranges,peaches,pears,winter squash,star anise,sun-dried tomatoes,tamarind,turmeric,vanilla,\[Bullet] Clove pairs well with:allspice,apples,beets,bay leaf,cakes,cardamom,cacao,carrots,chocolate,citrus,coriander,cumin,curry,fennel,ginger,mace,nutmeg,orange,peaches,pineapple,pumpkin,red cabbage,star anise,tamarind,turmeric,vanilla
+\[Bullet] Coconut pairs well with:Allspice,banana,basil,black pepper,Brazil nut,caramel,chocolate,citrus,cumin,curry leaf,garlic,ginger,guava,lemongrass,passionfruit,pineapple,sun-dried,tomato,turmeric,vanilla
+\[Bullet] Coriander pairs well with:allspice,apples,bananas,beans,chili,cilantro,cinnamon,citrus,cloves,cumin,curry,fennel,fish,garlic,ginger,mace,mint,mushrooms,nutmeg,onion,parsley,\[Bullet] Cranberry pairs well with:apple,chocolate,cinnamon,citrus,mango,mint,pear
+\[Bullet] Cumin pairs well with:allspice,anise,avocados,bay leaf,beans,cabbage,cardamom,cilantro,cinnamon,citrus,coconut,coriander,cucumber,curry,fennel,fenugreek,garlic,ginger,lentils,mace,onion,nutmeg,parsley,tomatoes
+\[Bullet] Currants,Black and Red,pairs well with:cassis,chocolate,citrus
+\[Bullet] Dill pairs well with:anise,basil,cabbage,capers,caraway,carrots,chives,coriander,cucumbers,cumin,fennel,garlic,ginger,horseradish,mint,mustard,oregano,onion,paprika,parsley
+\[Bullet] Elderberry pairs well with:apricot,fig,honey,lemon,mandarin,other berries,peach,plum
+\[Bullet] Fennel pairs well with:anise,artichokes,basil,beans,cabbage,cheese,cilantro,cinnamon,cucumber,cumin,dill,eggplant,fenugreek,figs,garlic,lemon balm,lentils,mint,olives,onion,oregano,parsley,pork,thyme,tomatoes
+\[Bullet] Fig pairs well with:almond,black pepper,cinnamon,citrus,hazelnut,pear,vanilla
+\[Bullet] Garlic pairs well with:basil,caraway,chili,coriander,cumin,curry leaf,marjoram,mint,mustard seed,oregano,parsley,rosemary,sun-dried tomato,thyme
+\[Bullet] Ginger pairs well with:allspice,almond,anise,apple,apricot,banana,basil,berries,Brazil nut,caramel,carrots,chives,chocolate,cilantro,cinnamon,citrus,cloves,coconut,coriander,cranberry,cumin,curry,dates,fennel,grape,hazelnut,passion fruit,peach,pear,pineapple,plum,nutmeg,onion,peaches,pears,pepper,pumpkin,raisins,turmeric,vanilla
+\[Bullet] Gooseberry pairs well with:citrus,hazelnut,honey,other berries,white chocolate
+\[Bullet] Grape pairs well with:chocolate,citrus,fig,honey,ginger,raisin
+\[Bullet] Grapefruit pairs well with:basil,black pepper,caramel,citrus,mint,rosemary,thyme,tropical fruit,vanilla
+\[Bullet] Guava pairs well with:citrus,lime,coconut,huckleberry,kaffir leaf,pineapple,strawberry,tropical fruit
+\[Bullet] Hazelnut pairs well with:apple,apricot,banana,berries,caramel,cherry,chocolate,citrus,fig,mandarin,peach,pear,plum
+\[Bullet] Kaffir Leaf pairs well with:banana,citrus,coconut,lemongrass,tropical fruit,watermelon
+\[Bullet] Kiwi pairs well with:apple,banana,berries,cherry,citrus,coconut,mango,tropical fruit
+\[Bullet] Kumquat pairs well with:berries,cherry,chocolate,cinnamon,coffee,persimmon,plum
+\[Bullet] Lemon pairs well with:apricot,berries,black pepper,cardamom,cherry,citrus,ginger,nectarine,peach,plum,prickly pear,tropical fruit
+\[Bullet] Lemongrass pairs well with:cherry,berries,citrus,coconut,ginger,guava,kaffir leaf,coconut,tropical fruit,vanilla
+\[Bullet] Lime pairs well with:apple,berries,cherry,ginger,papaya,plum,strawberry,tropical fruit
+\[Bullet] Lychee pairs well with:citrus,ginger,gooseberry,tropical fruit,vanilla
+\[Bullet] Mace pairs well with:allspice,asparagus,beans,cabbage,carrots,cheese,cinnamon,cloves,coffee,cranberries,cumin,ginger,nutmeg,peaches,pumpkin,potatoes,vanilla,\[Bullet] Mandarin pairs well with:cardamom,cherry,chocolate,cinnamon,coffee,fig,ginger,nutmeg,tropical fruits,vanilla,star anise
+\[Bullet] Mango pairs well with:apple,banana,berries,caramel,citrus,coconut,melon,tropical fruits,vanilla,cinnamon
+\[Bullet] Marjoram pairs well with:artichokes,basil,cinnamon,cumin,eggplant,fennel,garlic,mushrooms,onion,oregano,parsley,thyme
+\[Bullet] Melon pairs well with:berries,citrus,lemongrass,lemon verbena
+\[Bullet] Nutmeg pairs well with:allspice,asparagus,cabbage,cardamom,carrots,cinnamon,cloves,coffee,coriander,cranberries,cumin,ginger,mace,onion,peaches,pumpkin,thyme,vanilla
+\[Bullet] Orange pairs well with:almonds,basil,berries,brandy,cherry,chocolate,cilantro,cinnamon,coffee,cranberry,fig,ginger,grape,hazelnut,mint,nutmeg,persimmon,pineapple,vanilla
+\[Bullet] Oregano pairs well with:basil,cinnamon,cumin,eggplant,fennel,garlic,marjoram,mushrooms,onion,parsley,thyme,tomatoes
+\[Bullet] Paprika pairs well with:allspice,caraway,cardamom,garlic,ginger,legumes,oregano,parsley,rosemary,saffron,thyme,turmeric,vegetables
+\[Bullet] Papaya pairs well with:citrus,black pepper,lime,mango,tropical fruit
+\[Bullet] Parsley pairs well with:basil,bay leaf,chives,dill,garlic,marjoram,mushrooms,grains,onion,oregano,thyme,tomatoes
+\[Bullet] Pear pairs well with:almond,apple,caramel,chestnut,chocolate,cinnamon,citrus,ginger,hazelnut,vanilla,walnut
+\[Bullet] Persimmon pairs well with:apple,black pepper,cinnamon,citrus,kumquat,pear
+\[Bullet] Pineapple pairs well with:basil,caramel,cilantro,coconut,macadamia,rosemary,tropical fruit
+\[Bullet] Plum pairs well with:almond,cinnamon,citrus,chestnut,black pepper,hazelnut,honey,vanilla
+\[Bullet] Pomegranate pairs well with:apple,citrus,cucumber,mint,tropical fruit
+\[Bullet] Prickly Pear pairs well with:citrus,lime,tomatillo,tropical fruit
+\[Bullet] Raspberry pairs well with:apricot,cinnamon,citrus,ginger,lemon,nectarine,other berries,peach,plum,rhubarb,thyme,vanilla
+\[Bullet] Rose water pairs well with:saffron,cardamom,jasmine,almonds,pistachios and coconuts.\[Bullet] Rosemary pairs well with:apples,asparagus,basil,citrus,cranberry,fennel,garlic,grains,mushrooms,marjoram,onion,oregano,parsley,thyme,tomatoes
+\[Bullet] Rhubarb pairs well with:apple,apricot,berries,black pepper,citrus,ginger,nectarine,peach,plum,strawberry
+\[Bullet] Sage pears well with:apples,bay leaf,capers,caraway,celery,citrus,garlic,ginger,marjoram,onions,paprika,parsley,rosemary,thyme,tomatoes
+\[Bullet] Sesame pairs well with:citrus,garlic,ginger,thyme
+\[Bullet] Strawberry pairs well with:apple,black pepper,chocolate,citrus,coriander,mint,rhubarb,vanilla
+\[Bullet] Thyme pairs well with:bananas,basil,bay leaf,beans,carrots,citrus,dill,garlic,mint,mushrooms,onion,oregano,parsley,sage
+\[Bullet] Tomatillo pairs well with:berries,citrus,mango,prickly pear,tropical fruit
+\[Bullet] Walnut pairs well with:apple,apricot,banana,caramel,chocolate,cinnamon,nectarine,peach,pear,plum,rum","\[Bullet]"];
 
-strtotal = 
-    "\[Bullet] Allspice pairs well \
-  with:apples,beets,cabbage,caramel,cardamom,cinnamon,cloves,\
-coriander,\
-  ginger,juniper,mace,mustard,nuts,nutmeg,onions,pears,pumpkin,root \
-  vegetables,yams.\[Bullet] Almond pairs well \
-  with:apple,apricot,banana,caramel,cherry,coffee,fig,honey,orange,\
-  peach,pear,plum
-    \[Bullet] Anice pairs well \
-  with:apples,beets,caramel,carrots,chocolate,citrus,cinnamon,coconut,\
-  coriander,cranberry,fennel,figs,fish,garlic,peaches,pomegranates,\
-  pumpkin
-    \[Bullet] Apple pairs well \
-  with:caramel,cardamom,chestnut,cinnamon,cranberry,currant,ginger,\
-  hazelnut,mango,maple,rosemary,walnut
-    \[Bullet] Apricot pairs well with:almond,black \
-  pepper,caramel,cardamom,ginger,hazelnut,honey,orange,peach,vanilla,\
-plum
-    \[Bullet] Asian Pear pairs well with:almond,apple,black \
-  pepper,cinnamon,ginger,honey,macadamia,nutmeg,raisin,vanilla
-    \[Bullet] Banana pairs well \
-  with:caramel,cherry,chocolate,cinnamon,coffee,ginger,hazelnut,honey,\
-  mango,molasses,papaya
-    \[Bullet] Basil pairs well \
-  with:capers,chives,cilantro,garlic,marjoram,oregano,mint,onion,\
-  parsley,rosemary,thyme,artichokes,eggplant,green \
-  vegetables,mushrooms,olives,Sweet Basil is the best basil for pesto \
-  and tomato salads.\[Bullet] Bay leaf pairs well \
-  with:artichokes,beans,garlic,grains,juniper,lentils,marjoram,\
-  mushrooms,nuts,oregano,parsley,potatoes,sage,savory,thyme and \
-  tomatoes
-    \[Bullet] Blackberry pairs well with:apricot,black \
-  pepper,cinnamon,citrus,hazelnut,lemon,other berries,peach,plum
-    \[Bullet] Blood Orange pairs well \
-  with:almond,cardamom,chocolate,cinnamon,clove,fig,ginger,honey,\
-other \
-  citrus
-    \[Bullet] Blueberry pairs well with:other \
-  berries,cardamom,mango,lemon,hazelnut,ginger,fig,lavender,other \
-  citrus
-    \[Bullet] Caraway pairs well \
-  with:apples,beets,broccoli,cabbage,pears,sauerkraut,allspice,\
-almonds,\
-  cardamom,chili,cinnamon,coriander,dill,fennel seed,juniper \
-  berry,onion,mushrooms,garlic,oregano,parsley,thyme.\[Bullet] \
-Cardamom \
-  pairs well with:apples,bananas,beans,caramel,citrus \
-fruit,coconut,ice \
-  creams,nuts,mango,allspice,almond,cardamom,chili,cinnamon,clove,\
-  coriander,cumin,curry,dates,fennel \
-  seed,ginger,mustard,paprika,pears,pepper,star \
-anise,turmeric,saffron
-    \[Bullet] Carrot pairs well \
-  with:anise,cinnamon,ginger,nutmeg,walnut
-    \[Bullet] Celery pairs well \
-  with:cabbage,cilantro,cucumber,cumin,garlic,ginger,mustard,onion,\
-  parsley,pepper,rosemary,sage,tomatoes,thyme
-    \[Bullet] Celery Seed pairs well with:tomatoes,allspice,black \
-  pepper,caraway,chili,cinnamon coriander,cumin,fennel \
-  seed,ginger,sage,turmeric
-    \[Bullet] Cherry pairs well with:apricot,black \
-  pepper,chocolate,citrus,nectarine,peach,plum,vanilla
-    \[Bullet] Chestnut pairs well \
-  with:apple,caramel,chocolate,coffee,pear,vanilla
-    \[Bullet] Chives pair well \
-  with:asparagus,basil,cheese,cilantro,dill,fennel,green \
-  vegetables,horseradish,mushrooms,olives,paprika,pasta,parsley,\
-  tarragon
-    \[Bullet] Chocolate pairs well \
-  with:oranges,nuts,Allspice,almond,aniseed,cinnamon,clove,curry \
-  leaf,fennel seed,garlic,ginger,lemongrass,mint,nutmeg,onion,vanilla
-    \[Bullet] Cilantro (coriander) pairs well \
-  with:apples,apricot,avocados,berries,cherries,citrus,coconut,\
-  nectarine,peach,plum,tropical \
-  fruit,Allspice,Cardamom,clove,cumin,curry,dates,fennel \
-  seed,garlic,ginger,mint,sun-dried \
-tomato,turmeric,tomatoes.\[Bullet] \
-  Cinnamon pairs well \
-  with:allspice,apples,bananas,cantaloupe,caraway,cardamom,clove,\
-cacao,\
-  chilies,caramel,cauliflower,chocolate,corn,curries,coffee,coriander,\
-  cranberry,cumin,dates,figs,ginger,mint,nutmeg,grapes,oranges,\
-peaches,\
-  pears,winter squash,star anise,sun-dried \
-  tomatoes,tamarind,turmeric,vanilla,\[Bullet] Clove pairs well \
-  with:allspice,apples,beets,bay \
-  leaf,cakes,cardamom,cacao,carrots,chocolate,citrus,coriander,cumin,\
-  curry,fennel,ginger,mace,nutmeg,orange,peaches,pineapple,pumpkin,\
-red \
-  cabbage,star anise,tamarind,turmeric,vanilla
-    \[Bullet] Coconut pairs well with:Allspice,banana,basil,black \
-  pepper,Brazil nut,caramel,chocolate,citrus,cumin,curry \
-  leaf,garlic,ginger,guava,lemongrass,passionfruit,pineapple,sun-\
-dried,\
-  tomato,turmeric,vanilla
-    \[Bullet] Coriander pairs well \
-  with:allspice,apples,bananas,beans,chili,cilantro,cinnamon,citrus,\
-  cloves,cumin,curry,fennel,fish,garlic,ginger,mace,mint,mushrooms,\
-  nutmeg,onion,parsley,\[Bullet] Cranberry pairs well \
-  with:apple,chocolate,cinnamon,citrus,mango,mint,pear
-    \[Bullet] Cumin pairs well with:allspice,anise,avocados,bay \
-  leaf,beans,cabbage,cardamom,cilantro,cinnamon,citrus,coconut,\
-  coriander,cucumber,curry,fennel,fenugreek,garlic,ginger,lentils,\
-mace,\
-  onion,nutmeg,parsley,tomatoes
-    \[Bullet] Currants,Black and Red,pairs well \
-  with:cassis,chocolate,citrus
-    \[Bullet] Dill pairs well \
-  with:anise,basil,cabbage,capers,caraway,carrots,chives,coriander,\
-  cucumbers,cumin,fennel,garlic,ginger,horseradish,mint,mustard,\
-oregano,\
-  onion,paprika,parsley
-    \[Bullet] Elderberry pairs well \
-  with:apricot,fig,honey,lemon,mandarin,other berries,peach,plum
-    \[Bullet] Fennel pairs well \
-  with:anise,artichokes,basil,beans,cabbage,cheese,cilantro,cinnamon,\
-  cucumber,cumin,dill,eggplant,fenugreek,figs,garlic,lemon \
-  balm,lentils,mint,olives,onion,oregano,parsley,pork,thyme,tomatoes
-    \[Bullet] Fig pairs well with:almond,black \
-  pepper,cinnamon,citrus,hazelnut,pear,vanilla
-    \[Bullet] Garlic pairs well \
-  with:basil,caraway,chili,coriander,cumin,curry \
-  leaf,marjoram,mint,mustard seed,oregano,parsley,rosemary,sun-dried \
-  tomato,thyme
-    \[Bullet] Ginger pairs well \
-  with:allspice,almond,anise,apple,apricot,banana,basil,berries,\
-Brazil \
-  nut,caramel,carrots,chives,chocolate,cilantro,cinnamon,citrus,\
-cloves,\
-  coconut,coriander,cranberry,cumin,curry,dates,fennel,grape,hazelnut,\
-  passion fruit,peach,pear,pineapple,plum,nutmeg,onion,peaches,pears,\
-  pepper,pumpkin,raisins,turmeric,vanilla
-    \[Bullet] Gooseberry pairs well with:citrus,hazelnut,honey,other \
-  berries,white chocolate
-    \[Bullet] Grape pairs well \
-  with:chocolate,citrus,fig,honey,ginger,raisin
-    \[Bullet] Grapefruit pairs well with:basil,black \
-  pepper,caramel,citrus,mint,rosemary,thyme,tropical fruit,vanilla
-    \[Bullet] Guava pairs well \
-  with:citrus,lime,coconut,huckleberry,kaffir \
-  leaf,pineapple,strawberry,tropical fruit
-    \[Bullet] Hazelnut pairs well \
-  with:apple,apricot,banana,berries,caramel,cherry,chocolate,citrus,\
-fig,\
-  mandarin,peach,pear,plum
-    \[Bullet] Kaffir Leaf pairs well \
-  with:banana,citrus,coconut,lemongrass,tropical fruit,watermelon
-    \[Bullet] Kiwi pairs well \
-  with:apple,banana,berries,cherry,citrus,coconut,mango,tropical \
-fruit
-    \[Bullet] Kumquat pairs well \
-  with:berries,cherry,chocolate,cinnamon,coffee,persimmon,plum
-    \[Bullet] Lemon pairs well with:apricot,berries,black \
-  pepper,cardamom,cherry,citrus,ginger,nectarine,peach,plum,prickly \
-  pear,tropical fruit
-    \[Bullet] Lemongrass pairs well \
-  with:cherry,berries,citrus,coconut,ginger,guava,kaffir \
-  leaf,coconut,tropical fruit,vanilla
-    \[Bullet] Lime pairs well \
-  with:apple,berries,cherry,ginger,papaya,plum,strawberry,tropical \
-  fruit
-    \[Bullet] Lychee pairs well \
-with:citrus,ginger,gooseberry,tropical \
-  fruit,vanilla
-    \[Bullet] Mace pairs well \
-  with:allspice,asparagus,beans,cabbage,carrots,cheese,cinnamon,\
-cloves,\
-  coffee,cranberries,cumin,ginger,nutmeg,peaches,pumpkin,potatoes,\
-  vanilla,\[Bullet] Mandarin pairs well \
-  with:cardamom,cherry,chocolate,cinnamon,coffee,fig,ginger,nutmeg,\
-  tropical fruits,vanilla,star anise
-    \[Bullet] Mango pairs well \
-  with:apple,banana,berries,caramel,citrus,coconut,melon,tropical \
-  fruits,vanilla,cinnamon
-    \[Bullet] Marjoram pairs well \
-  with:artichokes,basil,cinnamon,cumin,eggplant,fennel,garlic,\
-mushrooms,\
-  onion,oregano,parsley,thyme
-    \[Bullet] Melon pairs well with:berries,citrus,lemongrass,lemon \
-  verbena
-    \[Bullet] Nutmeg pairs well \
-  with:allspice,asparagus,cabbage,cardamom,carrots,cinnamon,cloves,\
-  coffee,coriander,cranberries,cumin,ginger,mace,onion,peaches,\
-pumpkin,\
-  thyme,vanilla
-    \[Bullet] Orange pairs well \
-  with:almonds,basil,berries,brandy,cherry,chocolate,cilantro,\
-cinnamon,\
-  coffee,cranberry,fig,ginger,grape,hazelnut,mint,nutmeg,persimmon,\
-  pineapple,vanilla
-    \[Bullet] Oregano pairs well \
-  with:basil,cinnamon,cumin,eggplant,fennel,garlic,marjoram,mushrooms,\
-  onion,parsley,thyme,tomatoes
-    \[Bullet] Paprika pairs well \
-  with:allspice,caraway,cardamom,garlic,ginger,legumes,oregano,\
-parsley,\
-  rosemary,saffron,thyme,turmeric,vegetables
-    \[Bullet] Papaya pairs well with:citrus,black \
-  pepper,lime,mango,tropical fruit
-    \[Bullet] Parsley pairs well with:basil,bay \
-  leaf,chives,dill,garlic,marjoram,mushrooms,grains,onion,oregano,\
-thyme,\
-  tomatoes
-    \[Bullet] Pear pairs well \
-  with:almond,apple,caramel,chestnut,chocolate,cinnamon,citrus,ginger,\
-  hazelnut,vanilla,walnut
-    \[Bullet] Persimmon pairs well with:apple,black \
-  pepper,cinnamon,citrus,kumquat,pear
-    \[Bullet] Pineapple pairs well \
-  with:basil,caramel,cilantro,coconut,macadamia,rosemary,tropical fruit
-    \[Bullet] Plum pairs well \
-  with:almond,cinnamon,citrus,chestnut,black \
-  pepper,hazelnut,honey,vanilla
-    \[Bullet] Pomegranate pairs well \
-  with:apple,citrus,cucumber,mint,tropical fruit
-    \[Bullet] Prickly Pear pairs well \
-  with:citrus,lime,tomatillo,tropical fruit
-    \[Bullet] Raspberry pairs well \
-  with:apricot,cinnamon,citrus,ginger,lemon,nectarine,other \
-  berries,peach,plum,rhubarb,thyme,vanilla
-    \[Bullet] Rose water pairs well \
-  with:saffron,cardamom,jasmine,almonds,pistachios and coconuts.\
-  \[Bullet] Rosemary pairs well \
-  with:apples,asparagus,basil,citrus,cranberry,fennel,garlic,grains,\
-  mushrooms,marjoram,onion,oregano,parsley,thyme,tomatoes
-    \[Bullet] Rhubarb pairs well with:apple,apricot,berries,black \
-  pepper,citrus,ginger,nectarine,peach,plum,strawberry
-    \[Bullet] Sage pears well with:apples,bay \
-  leaf,capers,caraway,celery,citrus,garlic,ginger,marjoram,onions,\
-  paprika,parsley,rosemary,thyme,tomatoes
-    \[Bullet] Sesame pairs well with:citrus,garlic,ginger,thyme
-    \[Bullet] Strawberry pairs well with:apple,black \
-  pepper,chocolate,citrus,coriander,mint,rhubarb,vanilla
-    \[Bullet] Thyme pairs well with:bananas,basil,bay \
-  leaf,beans,carrots,citrus,dill,garlic,mint,mushrooms,onion,oregano,\
-  parsley,sage
-    \[Bullet] Tomatillo pairs well with:berries,citrus,mango,prickly \
-  pear,tropical fruit
-    \[Bullet] Walnut pairs well \
-  with:apple,apricot,banana,caramel,chocolate,cinnamon,nectarine,\
-peach,\
-  pear,plum,rum";
+StringSplit[ss1,"pairs well with:"|"pair well with:"|"pears well with:"];
+ss2=StringTrim[#]&/@(StringSplit[ss1,"pairs well with:"|"pair well with:"|"pears well with:"]);
+ss3=ToLowerCase[({#[[1]],Flatten[StringSplit[StringTrim[StringTrim[StringSplit[#[[2]],"," | " and "],"."]],","]]}&/@ss2)];
+words=ss3//Flatten//Union;
+pluralreps=#[[2]]->#[[1]]&/@(Union[Sort[{words[[#[[1]]]],words[[#[[2]]]]}]&/@Position[Table[EditDistance[words[[m]],words[[n]]],{m,Length[words]},{n,Length[words]}],1|2]]);
+pluralreps=Select[%,If[StringLength[#[[1]]]>3&&StringLength[#[[2]]]>3,StringTake[#[[1]],;;4]==StringTake[#[[2]],;;4],StringTake[#[[1]],;;-2]==StringTake[#[[2]],;;-2]]&]
+pluralreps=Join[pluralreps,{"potatoes"->"potato","cherries"->"cherry","cilantro (coriander)"->"cilantro","citrus fruit"->"citrus","cranberries"->"cranberry","curries"->"curry","currant"->"currants","juniper berry"->"juniper","star anise"->"anise","sun-dried"->"sun-dried tomato","currants,black and red,"->"currants"}]
+gotogether=Flatten[Table[{ss3[[n,1]],#}&/@ss3[[n,2]],{n,Length[ss3]}],1]/.pluralreps//Sort//Union;
+Graph[RandomSample[Union[DeleteCases[#[[1]]\[UndirectedEdge]#[[2]]&/@gotogether,"basil"\[UndirectedEdge]"sweet basil is the best basil for pesto"|"celery seed"\[UndirectedEdge]"cinnamon coriander"|n_\[UndirectedEdge]n_|n_\[UndirectedEdge]"tomato salads"]],100],VertexLabels->"Name",ImageSize->1000,ImagePadding->100]
 
-splittotal = StringSplit[strtotal, "\[Bullet]"];
 
-ss2 = StringTrim[#] & /@ (StringSplit[splittotal, 
-          
-     "pairs well with:" | "pair well with:" | "pears well with:"]);
 
-ss3 = ToLowerCase[({#[[1]], 
-              Flatten[StringSplit[
-                  StringTrim[StringSplit[#[[2]], "," | " and "], "."], 
-                  ","]]} & /@ ss2)];
 
-words = ss3 // Flatten // Union;
+(*This is the full graph. We can find all cliques within this graph of a given size*)
+gg=Graph[Union[DeleteCases[#[[1]]\[UndirectedEdge]#[[2]]&/@Union[(Sort[#]&/@Sort[Union[Sort[Flatten[Table[{ToLowerCase[ss3[[n,1]]],ToLowerCase[#]}&/@ss3[[n,2]],{n,Length[ss3]}],1]/.pluralreps]]])],"basil"\[UndirectedEdge]"sweet basil is the best basil for pesto"|"celery seed"\[UndirectedEdge]"cinnamon coriander"|n_\[UndirectedEdge]n_|n_\[UndirectedEdge]"tomato salads"]],ImageSize->1400,ImagePadding->100,VertexLabels->"Name"];
+gg//EdgeList//Length
 
-editdistances = 
-    Table[
-   EditDistance[words[[m]], words[[n]]], {m, Length[words]}, {n, 
-        Length[words]}];
+FindClique[gg,{5},All]//Sort
+FindClique[gg,{6},All]//Sort
 
-editdistance1or2 = #[[2]] -> #[[1]] & /@ 
-      Union[Sort[{words[[#[[1]]]], words[[#[[2]]]]}] & /@ 
-          Position[editdistances, 1 | 2]];
 
-pluralreps = 
-    Select[editdistance1or2, 
-      If[StringLength[#[[1]]] > 3 && StringLength[#[[2]]] > 3, 
-          StringTake[#[[1]], ;; 4] == StringTake[#[[2]], ;; 4], 
-          StringTake[#[[1]], ;; -2] == StringTake[#[[2]], ;; -2]] &];
+FindClique[gg]
 
-pluralreps = 
-    Join[{"cherries" -> "cherry", 
-    "cilantro (coriander)" -> "cilantro", 
-        "citrus fruit" -> "citrus", "cranberries" -> "cranberry", 
-        "curries" -> "curry", "juniper berry" -> "juniper", 
-        "star anise" -> "anise", "sun-dried" -> "sun-dried tomato", 
-        "currants,black and red," -> "currants"}, pluralreps];
+Sort[#]&/@FindClique[gg,{8},All]
 
-gotogether = 
-    Flatten[
-      Table[{ss3[[n, 1]], #} & /@ ss3[[n, 2]], {n, Length[ss3]}], 
-            1] /. pluralreps // Sort // Union;
+eights=FindClique[gg,{8},All]
+sevens=Join[FindClique[gg,{7},All],Flatten[Table[Delete[#,n]//Sort,{n,8}]&/@eights,1]//Union]//Union;
+sixes=Join[FindClique[gg,{6},All],Flatten[Table[Delete[#,n]//Sort,{n,7}]&/@sevens,1]//Union]//Union;
+fives=Join[FindClique[gg,{5},All],Flatten[Table[Delete[#,n]//Sort,{n,6}]&/@sixes,1]//Union]//Union;
+fours=Join[FindClique[gg,{4},All],Flatten[Table[Delete[#,n]//Sort,{n,5}]&/@fives,1]//Union]//Union;
+threes=Join[FindClique[gg,{3},All],Flatten[Table[Delete[#,n]//Sort,{n,4}]&/@fours,1]//Union]//Union;
+twos=Join[FindClique[gg,{2},All],Flatten[Table[Delete[#,n]//Sort,{n,3}]&/@threes,1]//Union]//Union;
 
-graphedges1 = #[[1]] <-> #[[2]] & /@ gotogether;
 
-graphedges2 = 
-    Union[DeleteCases[graphedges1, 
-        "basil" <-> "sweet basil is the best basil for pesto" | 
-          "celery seed" <-> "cinnamon coriander" | n_ <-> n_ | 
-          n_ <-> "tomato salads"]];
+{#[[1]],Log[Length[#[[2]]]]}&/@{{8,eights},{7,sevens},{6,sixes},{5,fives},{4,fours},{3,threes},{2,twos},{1,Range[Length[words]]}}
+Show[ListLinePlot[%,AxesOrigin->{0,0},AxesLabel->{"size of clique","Log of number of cliques"},BaseStyle->Medium],ListPlot[%,AxesOrigin->{0,0}]]
+Export["cliquenumbers.jpg",%]
 
-Graph[RandomSample[graphedges2, 100], 
-  VertexLabels -> "Name", ImageSize -> 1000, ImagePadding -> 100]
 
+
+{#,Log[Length[FindClique[gg,{#},All]]]}&/@Range[8]
+Show[ListLinePlot[%,AxesOrigin->{0,0},AxesLabel->{"size of maximal cliques","Log of number of maximal cliques"},BaseStyle->Medium],ListPlot[%,AxesOrigin->{0,0}]]
+Export["cliquenumbers.jpg",%]
+
+
+
+FindClique[gg,8,All][[#]]&/@(Position[FindClique[gg,8,All],"pineapple"][[;;,1]])//MatrixForm
+
+findcliquewith[ingredients_]:=Module[{nit,allcliques,recipe,cliqueswithfood1},
+allcliques=FindClique[gg,8,All];
+DeleteCases[If[Intersection[#,Sort[{ingredients}//Flatten]]==Sort[{ingredients}//Flatten],#]&/@allcliques,Null]
+]
+findcliquewith[{"cilantro","coconut"}]
+
+vl=VertexList[gg]
+
+sp=Flatten[Table[{{vl[[m]],vl[[n]]},Length[FindShortestPath[gg,vl[[m]],vl[[n]]]]},{m,Length[vl]},{n,Length[vl]}],1];
+longest=Sort[sp,#1[[2]]>#2[[2]]&][[1,2]];
+Select[sp,#[[2]]==longest&][[;;,1]]//Sort//Union;
+Sort[Tally[Flatten[%]],#1[[2]]>#2[[2]]&]
+
+PathGraph[FindShortestPath[gg,"eggplant","white chocolate"],VertexLabels->"Name",ImagePadding->100,ImageSize->600]
+
+findcliquewith[#][[1]]&/@With[{x=FindShortestPath[gg,"eggplant","white chocolate"]},Partition[Flatten[{x[[#]],x[[#]],x[[#]]}&/@Range[Length[x]]],3]]//MatrixForm
+
+findcliquewith[#][[1]]&/@With[{x=FindShortestPath[gg,"eggplant","white chocolate"]},Partition[Riffle[x,x][[2;;]],2]]//MatrixForm
+
+findcliquewith[{"eggplant","fennel"}]
+HighlightGraph[gg,PathGraph[FindShortestPath[gg,"eggplant","white chocolate"]]]
+
+allfoods=VertexList[gg];
+allllings=EdgeList[gg];
+alledges=(Cases[{#,Length[Position[alllinks,#]]}&/@allfoods,{_,1}]//Sort)[[;;,1]];
+allinbyone=DeleteCases[alllinks[[Position[alllinks,#][[;;,1]][[1]]]]&/@alledges//Flatten,Apply[Alternatives,alledges]];
+alllinks[[#[[1]],#[[2]]]]&/@(Flatten[Position[alllinks,#]&/@allinbyone,1]/.{{m_,1}->{m,2},{m_,2}->{m,1}})//Flatten//Union;
+complement1=Complement[allfoods,%]
+Flatten[Table[{complement1[[m]],complement1[[n]]},{m,Length[complement1]},{n,Length[complement1]}],1];
+(Position[alllinks,#]&/@%)//Flatten
+alllinks[[#]]&/@%
+
+
+dominatingset=Join[allinbyone,DeleteCases[complement1,"tomatillo"]]//Union
+Length[%]
+
+(*check that the dominating set is indeed the full set.*)
+el=({#[[1]],#[[2]]}&/@EdgeList[gg]);
+Sort[Union[Flatten[Cases[el,{_,#}|{#,_}]&/@dominatingset]]]==Sort[allfoods]
+True
+(*Plot the dominating set on the full graph*)
+HighlightGraph[gg,dominatingset//Union]
